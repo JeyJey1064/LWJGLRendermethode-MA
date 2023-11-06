@@ -34,14 +34,14 @@ public class ShaderHandler {
 		//compilier dr shader
 		GL30.glCompileShader(vertexID);
 		
-		//Check for Errors in Compilation, erscht welles überprüeft, denn was überprüeft
+		//Check for Errors in Compilation, erscht welles ï¿½berprï¿½eft, denn was ï¿½berprï¿½eft
 		int succes = GL30.glGetShaderi(vertexID, GL30.GL_COMPILE_STATUS);
 		
 		if (succes == GL30.GL_FALSE) {
 			
 			int len= GL30.glGetShaderi(vertexID, GL30.GL_INFO_LOG_LENGTH);
 			System.err.println("Vertex Shader Compilation failed in file default.glsl!");
-			//wege C brucht glGetShaderInfo beides, d Id und d Längi
+			//wege C brucht glGetShaderInfo beides, d Id und d Lï¿½ngi
 			System.out.println(GL30.glGetShaderInfoLog(vertexID, len));
 			
 			//TODO aluege was das macht
@@ -57,22 +57,20 @@ public class ShaderHandler {
 		//compilier dr shader
 		GL30.glCompileShader(fragmentID);
 		
-		//Check for Errors in Compilation, erscht welles überprüeft, denn was überprüeft
+		//Check for Errors in Compilation, erscht welles ï¿½berprï¿½eft, denn was ï¿½berprï¿½eft
 		succes = GL30.glGetShaderi(fragmentID, GL30.GL_COMPILE_STATUS);
 		
 		if (succes == GL30.GL_FALSE) {
 			
 			int len = GL30.glGetShaderi(fragmentID, GL30.GL_INFO_LOG_LENGTH);
 			System.err.println("Fragment Shader Compilation failed in file default.glsl!");
-			//wege C brucht glGetShaderInfo beides, d Id und d Längi
+			//wege C brucht glGetShaderInfo beides, d Id und d Lï¿½ngi
 			System.out.println(GL30.glGetShaderInfoLog(fragmentID, len));
 			
-			//TODO aluege was das macht
 			assert false: "";
 		
 		}
 
-		//TODO aluege was es Shaderprogramm isch
 		//creation shaderprogramm
 		shaderProgramm = GL30.glCreateProgram();
 		//attach the 2 shaders to the programm
@@ -86,7 +84,7 @@ public class ShaderHandler {
 		if(succes == GL30.GL_FALSE) {
 			int len = GL30.glGetProgrami(shaderProgramm, GL30.GL_INFO_LOG_LENGTH);
 			System.err.println("Linking of the Shaders failed!");
-			//wege C bruchts d Längi
+			//wege C bruchts d Lï¿½ngi
 			System.out.println(GL30.glGetProgramInfoLog(shaderProgramm, len));
 			assert false: "";
 		}
@@ -95,7 +93,6 @@ public class ShaderHandler {
 		return shaderProgramm;
 	}
 	
-	//TODO aluege was was macht und schöner code
 	public static void uploadUniformMatrix(String varName, Matrix4f mat4) {
 		int varLocation = GL30.glGetUniformLocation(ShaderHandler.getShaderProgramm(), varName);
 		//4x4 Matrix so 16
@@ -103,19 +100,7 @@ public class ShaderHandler {
 		
 		
 
-		//TODO luege was do passiert
 		mat4.get(matBuffer);
-		//TODO Maybe bruchts ke flip
-		//matBuffer.flip();
-		System.out.println("Limit after flip() is: " + matBuffer.limit());
-        System.out.println("Current position after flip() is: " + matBuffer.position());
-		
-		for (int i = 0; i < matBuffer.capacity(); i++) {
-		    System.out.print(matBuffer.get(i) + " ");
-		
-		}
-		System.out.println("");
-		
 		GL30.glUniformMatrix4fv(varLocation, false, matBuffer);
 		
 	}

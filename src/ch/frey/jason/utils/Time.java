@@ -2,7 +2,6 @@ package ch.frey.jason.utils;
 
 //here we convert the different variables, dt = time passed per frame, dt^(-1)=F/s=FPS
 public class Time {
-	//TODO aluege was jedi Funktion macht
 	
 	//System.nanoTime is the time of then wehen the application started
 	public static float timeStarted = System.nanoTime();

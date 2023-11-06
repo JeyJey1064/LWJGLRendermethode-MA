@@ -27,7 +27,6 @@ public class Window {
 
 	public void init() {
 		
-		//TODO aluege was das macht
 		GLFWErrorCallback.createPrint(System.err).set();
 		
 		// returns GLFW_FALSE if an error occured.
@@ -77,11 +76,11 @@ public class Window {
 		// GLFW.glfwDestroyWindow(window);
 
 		// Sets the Viewport of the Window
-		// TODO Viewport ändern funktioniert gerade nicht
+		// TODO Viewport ï¿½ndern funktioniert gerade nicht
 		// GL11.glViewport(0, 0, WIDTH, HEIGHT);
 
 		// Loops until the Window should close
-		// hier drinnen dürfen die Rendermethoden gebaut werden
+		// hier drinnen dï¿½rfen die Rendermethoden gebaut werden
 
 		// TODO aluege was das macht
 		GLFW.glfwMakeContextCurrent(window);
@@ -97,7 +96,7 @@ public class Window {
 		// OpenGL context, or any context that is managed externally.
 		// LWJGL detects the context that is current in the current thread,
 		// creates the GLCapabilities instance and makes the OpenGL
-		// (Anschienend sehr wichtig für bindings) bindings available for use.
+		// (Anschienend sehr wichtig fï¿½r bindings) bindings available for use.
 		//TODO aluege wie das funktioniert
 		GL.createCapabilities();
 		
@@ -112,10 +111,10 @@ public class Window {
 		
 		
 		while (!GLFW.glfwWindowShouldClose(window)) {
-			//Um alle Input eingaben zur verfügung zu stellen. Does Poll it and make it available to Keylisteners.
+			//Um alle Input eingaben zur verfï¿½gung zu stellen. Does Poll it and make it available to Keylisteners.
 			GLFW.glfwPollEvents();
 
-			//TODO aluege wurum me das bruche chönnti
+			//TODO aluege wurum me das bruche chï¿½nnti
 //			if(dt>0) {
 //				currentScene.update(dt);
 //			}
@@ -144,7 +143,6 @@ public class Window {
 		}
 	}
 	
-	//TODO luege ob das System brucht wird
 	public static void changeScene(int newScene) {
 		switch (newScene) {
 		case 0:

@@ -24,8 +24,7 @@ public class Camera {
 		transformationMatrix.identity();
 		//transformationMatrix.translate(translation);
 		
-		System.out.println(transformationMatrix);
-		//achtung cast, maybe gohts hie ned TODO äuä hie falsch
+		//achtung cast, maybe gohts hie ned TODO ï¿½uï¿½ hie falsch
 		//transformationMatrix.rotateXYZ((float) Math.toRadians(rx), (float) Math.toRadians(ry), (float) Math.toRadians(rz));
 		//transformationMatrix.scale(scale, scale, scale);
 		
@@ -35,7 +34,7 @@ public class Camera {
 	public void adjustProjection() {
 		//setzt d Matrix als identity Matrix, identity Matrix macht eis 1 pro zile und dr rescht null unzwar das diagonal vo tl to br
 		projectionMatrix.identity();
-		//TODO richtigi Wert für das wähle und für Perspective ändere
+		//TODO richtigi Wert fï¿½r das wï¿½hle und fï¿½r Perspective ï¿½ndere
 		projectionMatrix.ortho(0.0f, 32.0f * 40f, 0.0f, 32.0f * 21.0f, 0.0f, 100.0f);
 	}
 	public Matrix4f getViewMatrix() {

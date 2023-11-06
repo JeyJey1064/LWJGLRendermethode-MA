@@ -10,7 +10,6 @@ import org.joml.Vector2f;
 import org.joml.Vector3f;
 
 public class MyObjectReader {
-	// TODO luege das alles verstande wird
 	
 	private float[] verteciesArray = null;
 	private float[] normalsArray = null;
@@ -18,7 +17,6 @@ public class MyObjectReader {
 	private int[] indiciesArray = null;
 	private float[] myVertexArray = null;
 	
-	// TODO aluege wie Liste funktioniere
 	private List<Vector3f> vertecies = new ArrayList<Vector3f>();
 	private List<Vector2f> textures = new ArrayList<Vector2f>();
 	private List<Vector3f> normals = new ArrayList<Vector3f>();
@@ -66,7 +64,7 @@ public class MyObjectReader {
 							Float.parseFloat(currentLine[3]));
 					normals.add(normal);
 				} else if (line.startsWith("f ")) {
-					// jetzt sind mer fertig mit alle Listene und cheu die in Arrays hinzuefüege wie
+					// jetzt sind mer fertig mit alle Listene und cheu die in Arrays hinzuefï¿½ege wie
 					// mers gern hette.
 					verteciesArray = new float[vertecies.size() * 3];
 					texturesArray = new float[vertecies.size() * 2];

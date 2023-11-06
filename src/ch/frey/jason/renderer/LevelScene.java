@@ -16,7 +16,7 @@ public class LevelScene extends Scene{
 
 	@Override
 	public void update(float dt) {
-		// TODO Auto-generated method stub
+
 		Camera camera = new Camera(new Vector2f());
 		//TODO should only be called ones I think
 //		ShaderHandler.uploadUniformMatrix("uProjectionMatrix", camera.getProjectionMatrix());
@@ -25,7 +25,7 @@ public class LevelScene extends Scene{
 		ShaderHandler.init();
 		VAOVBOEBOHandler.initVAOVBOEBO();
 		TextureHandler marioTexture = new TextureHandler();
-		marioTexture.initTexture("testImage.jpg");
+		marioTexture.initTexture("testImage.png");
 		
 		//draw our stuff
 		//Bind Shader Programm used

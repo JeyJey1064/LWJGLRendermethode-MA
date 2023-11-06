@@ -14,12 +14,12 @@ public class TextureHandler {
 	private File texture = null;
 	public void initTexture(String fileName) {
 		texture = new File("Assets/Textures/" + fileName);
-		//TODO explain this:
+
 				textureID = GL30.glGenTextures();
 				GL30.glBindTexture(GL30.GL_TEXTURE_2D, textureID);
 				
 				//set Texture parameters
-				//Repeat in both directions (S steht für X, T steht für Y)
+				//Repeat in both directions (S steht fï¿½r X, T steht fï¿½r Y)
 				//TODO aluege was die Parameter genau wen
 				GL30.glTexParameteri(GL30.GL_TEXTURE_2D, GL30.GL_TEXTURE_WRAP_S, GL30.GL_REPEAT);
 				GL30.glTexParameteri(GL30.GL_TEXTURE_2D, GL30.GL_TEXTURE_WRAP_T, GL30.GL_REPEAT);

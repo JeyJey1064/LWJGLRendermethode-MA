@@ -11,7 +11,7 @@ uniform mat4 uTransformationMatrix;
 
 void main()
 {
-    gl_Position = vec4(aPos, 1.0) * uTransformationMatrix;
+    gl_Position = vec4(aPos, 1.0);
     TexCoord = aTexCoord;
 }
 
